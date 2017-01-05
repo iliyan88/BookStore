@@ -6,20 +6,19 @@ $booskResult=mysqli_query($conn,$allbookqry);
 $booksAuthors=array();
 while($books=mysqli_fetch_assoc($booskResult)){
     $booksAuthors[$books['book_id']]['book_title']=$books['book_title'];
-    $booksAuthors[$books['book_id']]['authors_names'][]=$books['author_name'];
+    $booksAuthors[$books['book_id']]['author'][$books['author_id']]=$books['author_name'];
 }
 
 echo '<a href="new-book.php">New book</a> <a href="author.php">New author</a>';
 echo '<table><tr><td>Books</td><td>Authors</td></tr>';
 
     foreach($booksAuthors as $items){
-        echo '<tr><td>'.$items['book_title'].'</td>';
-        $b=array();
-        foreach ($items['authors_names'] as $item)
+        echo '<tr><td>'.$items['book_title'].'</td><td>';
+        foreach ($items['author'] as $key => $item)
         {
-           $b[]=$item;
+            echo '<a href="author-books.php?authorId='.$key.'">'.$item.'</a> ';
         }
-        echo '<td>'.implode(',',$b).'</td></tr>';
+        echo '</td></tr>';
     }
 echo '</table>';
 
