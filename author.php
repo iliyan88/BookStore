@@ -15,7 +15,7 @@ include 'header.php';
 $query = mysqli_query($conn,'SELECT * FROM `authors`');
 while($q=mysqli_fetch_assoc($query))
 {
-    echo '<tr><td>'.$q['author_name'].'</td></tr>';
+    echo '<tr><td><a href="author-books.php?authorId='.$q['author_id'].'">'.$q['author_name'].'</a></td></tr>';
 }
 echo '</table>';
 
