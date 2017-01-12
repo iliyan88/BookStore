@@ -1,0 +1,64 @@
+[12-Jan-2017 13:09:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in C:\htdocs\BookStore\inc\stmt.php:50
+Stack trace:
+#0 C:\htdocs\BookStore\temp\authors.php(28): require_once()
+#1 {main}
+  thrown in C:\htdocs\BookStore\inc\stmt.php on line 50
+[12-Jan-2017 13:09:58 Europe/Berlin] PHP Warning:  require_once(../temp/maintenance.php): failed to open stream: No such file or directory in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:09:58 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '../temp/maintenance.php' (include_path='C:\xampp\php\pear\PEAR') in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:10:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in C:\htdocs\BookStore\inc\stmt.php:50
+Stack trace:
+#0 C:\htdocs\BookStore\temp\authors.php(28): require_once()
+#1 {main}
+  thrown in C:\htdocs\BookStore\inc\stmt.php on line 50
+[12-Jan-2017 13:10:01 Europe/Berlin] PHP Warning:  require_once(../temp/maintenance.php): failed to open stream: No such file or directory in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:10:01 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '../temp/maintenance.php' (include_path='C:\xampp\php\pear\PEAR') in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:20:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in C:\htdocs\BookStore\inc\stmt.php:50
+Stack trace:
+#0 C:\htdocs\BookStore\temp\authors.php(28): require_once()
+#1 {main}
+  thrown in C:\htdocs\BookStore\inc\stmt.php on line 50
+[12-Jan-2017 13:20:26 Europe/Berlin] PHP Warning:  require_once(maintenance.php): failed to open stream: No such file or directory in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:20:26 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required 'maintenance.php' (include_path='C:\xampp\php\pear\PEAR') in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:20:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in C:\htdocs\BookStore\inc\stmt.php:50
+Stack trace:
+#0 C:\htdocs\BookStore\temp\authors.php(28): require_once()
+#1 {main}
+  thrown in C:\htdocs\BookStore\inc\stmt.php on line 50
+[12-Jan-2017 13:20:28 Europe/Berlin] PHP Warning:  require_once(maintenance.php): failed to open stream: No such file or directory in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:20:28 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required 'maintenance.php' (include_path='C:\xampp\php\pear\PEAR') in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:20:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in C:\htdocs\BookStore\inc\stmt.php:50
+Stack trace:
+#0 C:\htdocs\BookStore\temp\authors.php(28): require_once()
+#1 {main}
+  thrown in C:\htdocs\BookStore\inc\stmt.php on line 50
+[12-Jan-2017 13:20:31 Europe/Berlin] PHP Warning:  require_once(maintenance.php): failed to open stream: No such file or directory in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:20:31 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required 'maintenance.php' (include_path='C:\xampp\php\pear\PEAR') in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:20:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in C:\htdocs\BookStore\inc\stmt.php:50
+Stack trace:
+#0 C:\htdocs\BookStore\temp\authors.php(28): require_once()
+#1 {main}
+  thrown in C:\htdocs\BookStore\inc\stmt.php on line 50
+[12-Jan-2017 13:20:40 Europe/Berlin] PHP Warning:  require_once(temp/maintenance.php): failed to open stream: No such file or directory in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:20:40 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required 'temp/maintenance.php' (include_path='C:\xampp\php\pear\PEAR') in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:20:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in C:\htdocs\BookStore\inc\stmt.php:50
+Stack trace:
+#0 C:\htdocs\BookStore\temp\authors.php(28): require_once()
+#1 {main}
+  thrown in C:\htdocs\BookStore\inc\stmt.php on line 50
+[12-Jan-2017 13:20:46 Europe/Berlin] PHP Warning:  require_once(../temp/maintenance.php): failed to open stream: No such file or directory in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:20:46 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '../temp/maintenance.php' (include_path='C:\xampp\php\pear\PEAR') in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:21:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in C:\htdocs\BookStore\inc\stmt.php:50
+Stack trace:
+#0 C:\htdocs\BookStore\temp\authors.php(28): require_once()
+#1 {main}
+  thrown in C:\htdocs\BookStore\inc\stmt.php on line 50
+[12-Jan-2017 13:21:03 Europe/Berlin] PHP Warning:  require_once(../../temp/maintenance.php): failed to open stream: No such file or directory in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:21:03 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '../../temp/maintenance.php' (include_path='C:\xampp\php\pear\PEAR') in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:21:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in C:\htdocs\BookStore\inc\stmt.php:50
+Stack trace:
+#0 C:\htdocs\BookStore\temp\authors.php(28): require_once()
+#1 {main}
+  thrown in C:\htdocs\BookStore\inc\stmt.php on line 50
+[12-Jan-2017 13:21:05 Europe/Berlin] PHP Warning:  require_once(../../temp/maintenance.php): failed to open stream: No such file or directory in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:21:05 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '../../temp/maintenance.php' (include_path='C:\xampp\php\pear\PEAR') in C:\htdocs\BookStore\inc\stmt.php on line 16
+[12-Jan-2017 13:36:10 Europe/Berlin] PHP Notice:  Undefined index: author_name in C:\htdocs\BookStore\inc\stmt.php on line 38

@@ -1,24 +1,49 @@
 <?php
-$pageTitle = 'Main page';
-include 'header.php';
+include "inc/function.php";
+//DO NOT DISPLAY ERRORS TO USER
+ini_set("display_errors", 0);
+ini_set("log_errors", 1);
 
-echo '<a href="books.php">New book</a> <a href="author.php">New author</a>';
-$query = mysqli_query($conn,'SELECT * FROM books LEFT JOIN books_authors ON books.book_id=books_authors.book_id LEFT JOIN `authors` ON books_authors.author_id=`authors`.author_id');
-$result=array();
-$item=array();
-while($item=mysqli_fetch_assoc($query)){
-    $result[$item['book_id']]['book_name']=$item['book_title'];
-    $result[$item['book_id']]['author'][$item['author_id']]=$item['author_name'];
-}
+//Define where do you want the log to go, syslog or a file of your liking with
+ini_set("error_log", dirname(__FILE__).'/php_errors.log');
 
-echo'<table class="mainTable"><tr><td>Book</td><td>Author</td></tr>';
-foreach($result as $item){
-    echo'<tr><td>'.$item['book_name'].'</td><td>';
-    foreach ($item['author'] as $key => $value) {
-        echo '<a href="author-books.php?authorId='.$key.'">'.$value.'</a> ';
+register_shutdown_function(function(){
+    $last_error = error_get_last();
+    if ( !empty($last_error) &&
+        $last_error['type'] & (E_ERROR | E_COMPILE_ERROR | E_PARSE | E_CORE_ERROR | E_USER_ERROR)
+    )
+    {
+        require_once('maintenance.php');
+        exit(1);
     }
-    echo '</td></tr>';
+});
+
+
+$page='';
+switch  ($_GET['p']){
+    case 'index_public':
+        $page='index_public';
+        break;
+    case 'authors';
+        $page='authors';
+        break;
+    case 'new-book';
+        $page='new-book';
+        break;
+    case'author-books';
+        $page = 'author-books';
+        break;
+    default:
+        $page='index_public';
+        break;
+
+
+
 
 }
-echo'</table>';
-include 'footer.php';
+$data=array();
+$data['title']='Books';
+echo '<pre>'.print_r($_GET,true).'</pre>';
+echo '<pre>'.print_r($_POST,true).'</pre>';
+$data['content']='temp/'.$page.'.php';
+render($data,'temp/layouts/def_layout.php');

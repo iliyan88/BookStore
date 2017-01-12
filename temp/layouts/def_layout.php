@@ -1,23 +1,7 @@
-<?php
-session_name('BookStore');
-session_set_cookie_params(2629743,'/','localhost',false,true);
-session_start();
-echo  '<title>'.$pageTitle.'</title>';
-
-$conn = mysqli_connect('localhost','admin','087376401','test');
-if(!$conn){
-    echo 'no database';
-    exit;
-}
-mysqli_set_charset($conn,'utf8');
-
-
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Zaken</title>
+<!--    <title>--><?//= $data['title']; ?><!--</title>-->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
@@ -27,3 +11,23 @@ mysqli_set_charset($conn,'utf8');
     <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
+<header>
+    <div>
+        <a href="index.php">Index</a>
+        <a href="index.php?p=authors">Authors</a>
+        <a href="index.php?p=books">Books</a>
+        <a href="index.php?p=new-book">New book</a>
+    </div>
+</header>
+    <div>
+        <?php
+        include $data['content'];
+        ?>
+    </div>
+<footer>
+    <div>
+        <p>All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
