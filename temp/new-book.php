@@ -1,7 +1,7 @@
 <?php
 require_once 'inc/stmt.php';
 ?>
-<form method="post">
+<form method="POST" >
     <div>
         <label for="book_name">Book name</label>
         <input type="text" name="book_name" />
@@ -20,14 +20,21 @@ require_once 'inc/stmt.php';
 </form>
 <?php
 if($_POST){
-    $book=trim($_POST['book_name']);
     $authors=array();
-    if($isThereBook->num_rows == 0){
-        if(mysqli_query($conn,"INSERT INTO `books`(book_title) VALUES ('".$_POST['book_name']."')") === true){
+    $stmtCheckBook->execute();
+    $bookResult=$stmtCheckBook->get_result();
+    $isBookIdExist=$bookResult->num_rows;
+    if($isBookIdExist == 0){
+        $stmtInsertBook->execute();
+        $insrtBookId=$stmtInsertBook->insert_id;
+        $GLOBALS['insrtBookId']=$stmtInsertBook->insert_id;
+        var_dump($GLOBALS['insrtBookId']);
+        if($insrtBookId != 0){
             echo 'Book added successfully';
-            $lastBookId=mysqli_fetch_assoc(mysqli_query($conn,"SELECT LAST_INSERT_ID()"));
             foreach ($_POST['authors'] as $authorID) {
-                mysqli_query($conn,"INSERT INTO `books_authors` (book_id,author_id) VALUES ('".$lastBookId['LAST_INSERT_ID()']."','".$authorID."')");
+                $stmtInsertBA=insBA($conn,$insrtBookId,$authorID);
+                $stmtInsertBA->execute();
+                $result=$stmtInsertBA->get_result();
             }
         }
         else{

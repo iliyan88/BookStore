@@ -15,7 +15,7 @@
     <div>
         <a href="index.php">Index</a>
         <a href="index.php?p=authors">Authors</a>
-        <a href="index.php?p=books">Books</a>
+        <a href="index.php?p=author-books">Books</a>
         <a href="index.php?p=new-book">New book</a>
     </div>
 </header>

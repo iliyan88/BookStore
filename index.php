@@ -43,7 +43,6 @@ switch  ($_GET['p']){
 }
 $data=array();
 $data['title']='Books';
-echo '<pre>'.print_r($_GET,true).'</pre>';
-echo '<pre>'.print_r($_POST,true).'</pre>';
 $data['content']='temp/'.$page.'.php';
 render($data,'temp/layouts/def_layout.php');
+echo '<pre>'.print_r($isThereBook,true).'</pre>';

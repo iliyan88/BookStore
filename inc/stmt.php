@@ -40,6 +40,8 @@ if($_GET['author_name'] != '') {
     $stmtCheckAuthor = $conn->prepare('SELECT * FROM authors WHERE author_name ="' . $name . '"');
     $stmtCheckAuthor->execute();
     $checkName = $stmtCheckAuthor->get_result();
+//check author by id
+    $checkID=mysqli_query($conn,"SELECT * FROM `authors` WHERE author_id = '".$_GET['authorId']."'");
 
 //insert author
     if ($checkName->num_rows == 0) {
@@ -47,24 +49,17 @@ if($_GET['author_name'] != '') {
         $stmtInsertAuthor = $conn->prepare("INSERT INTO `authors` (author_name) VALUE ('" . $name . "')");
         $stmtInsertAuthor->execute();
         $insrtAuthorResl = $stmtInsertAuthor->store_result();
-
-//            if($conn->query($insertName) === true){
-//                echo 'Successfully added author';
-//            }
-//            else{
-//                echo 'Unsuccessful attempt to add new author';
-//            }
     }
-//    else{
-//        echo 'Author with that name already exist';
-//    }
 }
 //check if book exist   $queryBook="SELECT * FROM `books` WHERE book_title = '".$book."'";
+$book=trim($_POST['book_name']);
 $stmtCheckBook=$conn->prepare("SELECT * FROM `books` WHERE book_title = '".$book."'");
-$stmtCheckBook->execute();
-$bookResult=$stmtCheckBook->get_result();
-$isThereBook=mysqli_fetch_assoc($bookResult);
 
 //insert a book
 $stmtInsertBook=$conn->prepare("INSERT INTO `books`(book_title) VALUES ('".$book."')");
-$stmtInsertBook->execute();
+
+//insert in books-author table
+function insBA($conn, $bookId, $authorId){
+    $stmtInsertBA=$conn->prepare("INSERT INTO `books_authors` (book_id,author_id) VALUES ('".$bookId."','".$authorId."')");
+    return $stmtInsertBA;
+}
