@@ -1,5 +1,6 @@
 <?php
 include "inc/function.php";
+
 //DO NOT DISPLAY ERRORS TO USER
 ini_set("display_errors", 0);
 ini_set("log_errors", 1);
@@ -42,7 +43,6 @@ switch  ($_GET['p']){
 
 }
 $data=array();
-$data['title']='Books';
+$data['title']='Boook';
 $data['content']='temp/'.$page.'.php';
 render($data,'temp/layouts/def_layout.php');
-echo '<pre>'.print_r($isThereBook,true).'</pre>';
